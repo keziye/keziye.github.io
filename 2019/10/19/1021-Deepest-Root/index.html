@@ -7,20 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>分类 - 为了星辰大海</title>
+<title>1021 Deepest Root - 为了星辰大海</title>
 
 
-    <meta name="description" content="新人码农，还在学习中">
-<meta property="og:type" content="website">
-<meta property="og:title" content="为了星辰大海">
-<meta property="og:url" content="https://keziye.github.io/categories/index.html">
+    <meta name="description" content="原题链接：1021">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1021 Deepest Root">
+<meta property="og:url" content="https://keziye.github.io/2019/10/19/1021-Deepest-Root/index.html">
 <meta property="og:site_name" content="为了星辰大海">
-<meta property="og:description" content="新人码农，还在学习中">
+<meta property="og:description" content="原题链接：1021">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://keziye.github.io/images/og_image.png">
+<meta property="article:published_time" content="2019-10-19T05:59:23.000Z">
+<meta property="article:modified_time" content="2019-10-19T06:17:26.405Z">
 <meta property="article:author" content="keziye">
 <meta property="article:tag" content="PAT(Advanced Level)">
-<meta property="article:tag" content="start">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://keziye.github.io/images/og_image.png">
 
@@ -28,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="为了星辰大海" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="1021 Deepest Root" type="application/atom+xml">
 
 
 
@@ -80,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/kt.jpg" alt="为了星辰大海" height="28">
+                <img src="/images/kt.jpg" alt="1021 Deepest Root" height="28">
             
             </a>
         </div>
@@ -94,7 +95,7 @@
                 <a class="navbar-item"
                 href="/archives">归档</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/categories">分类</a>
                 
                 <a class="navbar-item"
@@ -130,18 +131,133 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-19T05:59:23.000Z">2019-10-19</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 527 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-            </ul>
+                1021 Deepest Root
+            
+        </h1>
+        <div class="content">
+            <p><strong>原题链接</strong>：<a href="https://pintia.cn/problem-sets/994805342720868352/problems/994805482919673856">1021</a></p>
+<a id="more"></a>
+
+<p><strong>题目大意</strong>：给出一张图，这里想不出来该怎么表达“一个”图的说法，“一张”显得有点不够专业，所以说我还是太菜了。言归正传，需要给出这张图里可以构成的最深的树的根，有多个根结点深度一样，就按升序输出根节点编号，如果这幅图不是连通图那就输出ERROR以及最大联通子块的数目。</p>
+<p><strong>Sample Input1</strong>:</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">2</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">3</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">4</span></span><br><span class="line"><span class="symbol">2 </span><span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Sample Output1</strong>:</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Sample Input2</strong>:</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">3</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">4</span></span><br><span class="line"><span class="symbol">2 </span><span class="number">5</span></span><br><span class="line"><span class="symbol">3 </span><span class="number">4</span></span><br></pre></td></tr></table></figure>
+<p><strong>Sample Output2</strong>:</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>2 components</span><br></pre></td></tr></table></figure>
+
+<p><strong>思路</strong>:使用DFS（深度优先搜索）来遍历整幅图，把当前最深树的序列存到一个向量中，再从这个向量里随便选一个结点作为根节点进行DFS，并把结果和上次遍历的结果取交集就OK了，这里要提一下为什么要遍历两次并且还要取两次的交集，你想啊，一棵树里的最深的那条路径的叶子节点是不是可以反过来看作一个根节点，从这个根节点再来一次DFS，因为DFS是遍历完整个图，所以这次的结果肯定包涵上次的结果，但也有可能包涵其他同样深度的树，而其他同样深度的树是不是也可以这么反过来看？所以要取两次遍历的交集。</p>
+<p><strong>代码</strong>：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1010</span>;</span><br><span class="line"><span class="keyword">bool</span> vis[maxn];</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;v[maxn],temp;</span><br><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;st;</span><br><span class="line"><span class="keyword">int</span> n,maxdepth=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> index,<span class="keyword">int</span> depth)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(depth&gt;maxdepth)&#123;</span><br><span class="line">		maxdepth=depth;</span><br><span class="line">		temp.<span class="built_in">clear</span>();</span><br><span class="line">		temp.push_back(index); </span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(depth==maxdepth) temp.push_back(index);</span><br><span class="line">	vis[index]=<span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;v[index].<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(vis[v[index][i]]==<span class="literal">false</span>) DFS(v[index][i],depth+<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> a,b;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">		v[a].push_back(b);</span><br><span class="line">		v[b].push_back(a); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">fill</span>(vis,vis+maxn,<span class="literal">false</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(vis[i]==<span class="literal">false</span>)&#123;</span><br><span class="line">			DFS(i,<span class="number">1</span>);</span><br><span class="line">			cnt++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(cnt&gt;<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"Error: "</span>&lt;&lt;cnt&lt;&lt;<span class="string">" components"</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">fill</span>(vis,vis+maxn,<span class="literal">false</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;temp.<span class="built_in">size</span>();i++) st.insert(temp[i]);</span><br><span class="line">	<span class="keyword">int</span> k=temp[<span class="number">0</span>];</span><br><span class="line">	temp.<span class="built_in">clear</span>();</span><br><span class="line">	maxdepth=<span class="number">0</span>;</span><br><span class="line">	DFS(k,<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;temp.<span class="built_in">size</span>();i++) st.insert(temp[i]);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> it=st.<span class="built_in">begin</span>();it!=st.<span class="built_in">end</span>();it++)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;*it&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/PAT-Advanced-Level/" rel="tag">PAT(Advanced Level)</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/weixinpay.png" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/19/1022-Digital-Library/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">1022 Digital Library</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/12/1020-Tree-Traversals/">
+                <span class="level-item">1020 Tree Traversals</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
                 
 
 
@@ -675,7 +791,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/kt.jpg" alt="为了星辰大海" height="28">
+                    <img src="/images/kt.jpg" alt="1021 Deepest Root" height="28">
                 
                 </a>
                 <p class="is-size-7">

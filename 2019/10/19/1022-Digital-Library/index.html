@@ -7,20 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>分类 - 为了星辰大海</title>
+<title>1022 Digital Library - 为了星辰大海</title>
 
 
-    <meta name="description" content="新人码农，还在学习中">
-<meta property="og:type" content="website">
-<meta property="og:title" content="为了星辰大海">
-<meta property="og:url" content="https://keziye.github.io/categories/index.html">
+    <meta name="description" content="原题链接：1022">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1022 Digital Library">
+<meta property="og:url" content="https://keziye.github.io/2019/10/19/1022-Digital-Library/index.html">
 <meta property="og:site_name" content="为了星辰大海">
-<meta property="og:description" content="新人码农，还在学习中">
+<meta property="og:description" content="原题链接：1022">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://keziye.github.io/images/og_image.png">
+<meta property="article:published_time" content="2019-10-19T06:18:59.000Z">
+<meta property="article:modified_time" content="2019-10-19T06:30:31.464Z">
 <meta property="article:author" content="keziye">
 <meta property="article:tag" content="PAT(Advanced Level)">
-<meta property="article:tag" content="start">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://keziye.github.io/images/og_image.png">
 
@@ -28,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="为了星辰大海" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="1022 Digital Library" type="application/atom+xml">
 
 
 
@@ -80,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/kt.jpg" alt="为了星辰大海" height="28">
+                <img src="/images/kt.jpg" alt="1022 Digital Library" height="28">
             
             </a>
         </div>
@@ -94,7 +95,7 @@
                 <a class="navbar-item"
                 href="/archives">归档</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/categories">分类</a>
                 
                 <a class="navbar-item"
@@ -130,18 +131,126 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-19T06:18:59.000Z">2019-10-19</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 464 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-            </ul>
+                1022 Digital Library
+            
+        </h1>
+        <div class="content">
+            <p><strong>原题链接</strong>：<a href="https://pintia.cn/problem-sets/994805342720868352/problems/994805480801550336">1022</a></p>
+<a id="more"></a>
+
+<p><strong>题目大意</strong>：模拟图书馆里的查询系统，给出一些书的关键字，比如书名，作者，出版社，出版年份等等，需要根据给出的查询关键字输出书的编号,如果不存在该关键字则输出<code>Not Found</code>。</p>
+<p><strong>Sample Input</strong>:</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1111111</span><br><span class="line">The Testing Book</span><br><span class="line">Yue Chen</span><br><span class="line"><span class="keyword">test </span>code debug sort keywords</span><br><span class="line">ZUCS Print</span><br><span class="line">2011</span><br><span class="line">3333333</span><br><span class="line">Another Testing Book</span><br><span class="line">Yue Chen</span><br><span class="line"><span class="keyword">test </span>code sort keywords</span><br><span class="line">ZUCS Print2</span><br><span class="line">2012</span><br><span class="line">2222222</span><br><span class="line">The Testing Book</span><br><span class="line">CYLL</span><br><span class="line">keywords debug book</span><br><span class="line">ZUCS Print2</span><br><span class="line">2011</span><br><span class="line">6</span><br><span class="line">1: The Testing Book</span><br><span class="line">2: Yue Chen</span><br><span class="line">3: keywords</span><br><span class="line">4: ZUCS Print</span><br><span class="line">5: 2011</span><br><span class="line">3: blablabla</span><br></pre></td></tr></table></figure>
+
+<p><strong>Sample Output</strong>:</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>: The Testing Book</span><br><span class="line"><span class="number">1111111</span></span><br><span class="line"><span class="number">2222222</span></span><br><span class="line"><span class="number">2</span>: Yue Chen</span><br><span class="line"><span class="number">1111111</span></span><br><span class="line"><span class="number">3333333</span></span><br><span class="line"><span class="number">3</span>: keywords</span><br><span class="line"><span class="number">1111111</span></span><br><span class="line"><span class="number">2222222</span></span><br><span class="line"><span class="number">3333333</span></span><br><span class="line"><span class="number">4</span>: ZUCS Print</span><br><span class="line"><span class="number">1111111</span></span><br><span class="line"><span class="number">5</span>: <span class="number">2011</span></span><br><span class="line"><span class="number">1111111</span></span><br><span class="line"><span class="number">2222222</span></span><br><span class="line"><span class="number">3</span>: blablabla</span><br><span class="line">Not Found</span><br></pre></td></tr></table></figure>
+
+<p><strong>思路</strong>:这是一道需要使用STL里的map（映射）容器来做的题，建立一个关键字与书号的映射，因为map里自动排序（map内部实现是红黑树），所以一举两得，最后查询只需要输出每个映射里的值（value），这里每个查询就是键（key）。这里要注意两个点，第一，如果使用string类来表示每个输入，因为cin遇空格终止输入所以要用getline(cin,string_type);来写入数据，还有就是关于getchar();接受没有用的回车键，还有关于数据里key的输入利用getchar();来判断当前是否要结束输入key。</p>
+<p><strong>代码</strong>：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">string</span>,<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;&gt;mp;</span><br><span class="line"><span class="keyword">int</span> n,id;</span><br><span class="line"><span class="built_in">string</span> title,year,publish,auther,key;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;id;</span><br><span class="line">		getchar();</span><br><span class="line">		getline(<span class="built_in">cin</span>,title);</span><br><span class="line">		mp[title].insert(id);</span><br><span class="line">		getline(<span class="built_in">cin</span>,auther);</span><br><span class="line">		mp[auther].insert(id);</span><br><span class="line">		<span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;key;</span><br><span class="line">			<span class="keyword">char</span> c=getchar();</span><br><span class="line">			mp[key].insert(id); </span><br><span class="line">			<span class="keyword">if</span>(c==<span class="string">'\n'</span>) <span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		getline(<span class="built_in">cin</span>,publish);</span><br><span class="line">		mp[publish].insert(id);</span><br><span class="line">		getline(<span class="built_in">cin</span>,year);</span><br><span class="line">		mp[year].insert(id);  </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> query;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;query;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=query;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> Index;</span><br><span class="line">		<span class="built_in">string</span> Query;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d: "</span>,&amp;Index);</span><br><span class="line">		getline(<span class="built_in">cin</span>,Query);</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;Index&lt;&lt;<span class="string">": "</span>&lt;&lt;Query&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">if</span>(mp.<span class="built_in">find</span>(Query)!=mp.<span class="built_in">end</span>())&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">auto</span> it=mp[Query].<span class="built_in">begin</span>();it!=mp[Query].<span class="built_in">end</span>();it++) <span class="built_in">printf</span>(<span class="string">"%07d\n"</span>,*it);</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"Not Found\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/PAT-Advanced-Level/" rel="tag">PAT(Advanced Level)</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/weixinpay.png" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/19/1023-Have-Fun-With-Numbers/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">1023 Have Fun With Numbers</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/19/1021-Deepest-Root/">
+                <span class="level-item">1021 Deepest Root</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
                 
 
 
@@ -675,7 +784,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/kt.jpg" alt="为了星辰大海" height="28">
+                    <img src="/images/kt.jpg" alt="1022 Digital Library" height="28">
                 
                 </a>
                 <p class="is-size-7">

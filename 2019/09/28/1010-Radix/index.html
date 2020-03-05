@@ -7,20 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>分类 - 为了星辰大海</title>
+<title>1010 Radix - 为了星辰大海</title>
 
 
-    <meta name="description" content="新人码农，还在学习中">
-<meta property="og:type" content="website">
-<meta property="og:title" content="为了星辰大海">
-<meta property="og:url" content="https://keziye.github.io/categories/index.html">
+    <meta name="description" content="原题链接：1010">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1010 Radix">
+<meta property="og:url" content="https://keziye.github.io/2019/09/28/1010-Radix/index.html">
 <meta property="og:site_name" content="为了星辰大海">
-<meta property="og:description" content="新人码农，还在学习中">
+<meta property="og:description" content="原题链接：1010">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://keziye.github.io/images/og_image.png">
+<meta property="article:published_time" content="2019-09-28T05:55:45.000Z">
+<meta property="article:modified_time" content="2019-09-28T06:48:11.225Z">
 <meta property="article:author" content="keziye">
 <meta property="article:tag" content="PAT(Advanced Level)">
-<meta property="article:tag" content="start">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://keziye.github.io/images/og_image.png">
 
@@ -28,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="为了星辰大海" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="1010 Radix" type="application/atom+xml">
 
 
 
@@ -80,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/kt.jpg" alt="为了星辰大海" height="28">
+                <img src="/images/kt.jpg" alt="1010 Radix" height="28">
             
             </a>
         </div>
@@ -94,7 +95,7 @@
                 <a class="navbar-item"
                 href="/archives">归档</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/categories">分类</a>
                 
                 <a class="navbar-item"
@@ -130,18 +131,135 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-09-28T05:55:45.000Z">2019-09-28</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 718 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-            </ul>
+                1010 Radix
+            
+        </h1>
+        <div class="content">
+            <p><strong>原题链接</strong>：<a href="https://pintia.cn/problem-sets/994805342720868352/problems/994805507225665536">1010</a></p>
+<a id="more"></a>
+
+<p><strong>题目大意</strong>：给出两个范围在1&lt;&lt;64-1（超过int格式范围）范围内的正数，以及一个radix（其中某个数的进制），需要判断判断另一个数在某种进制中和已知进制数是否相等，相等输出另一个数的radix。</p>
+<p><strong>Sample Input 1</strong>:</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">6 </span><span class="number">110</span> <span class="number">1</span> <span class="number">10</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Sample Output 1</strong>:</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+
+<p><strong>Sample Input 2</strong>:</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">1 </span>ab <span class="number">1</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Sample Output 2</strong>:</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Impossible</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>思路</strong>：分析题目，是求一个未知进制的数在某一进制下是否与已知进制的数相等，当然都需要换成同一进制，比如十进制，首先需要考虑如何找到未知进制，因为不可能从2开始一直遍历吧，这样一定会超时，何况给的数据有可能使计算机溢出，所以考虑到二分法寻找进制，那么进制范围呢？即二分范围，考虑到已知进制数（已转成十进制）大小和未知进制数中数字最大的数字+1（想想为什么是未知进制数中最大数字+1），所以二分上限是max(已知数，未知数数字最大数+1)；下限是未知数中最大数字+1；为什么范围是这两个呢？首先，因为未知进制不可能小于等于未知数中最大的数，如果小于等于的话就不是这个数，早就有进位了，其中由于需要让两个数相等，所以在求解未知进制还要考虑已知数的大小，比如36（Decimal）和1（Unknown Radix），那么1在36进制下就等于36。题目给的数据范围是1&lt;&lt;64-1，故用long long 类型存储数据。</p>
+<p><strong>代码</strong>：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">todecimal</span><span class="params">(<span class="built_in">string</span> str,<span class="keyword">long</span> <span class="keyword">long</span> radix)</span></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;str.length();i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">isdigit</span>(str[i])) ans=ans*radix+str[i]-<span class="string">'0'</span>;</span><br><span class="line">		<span class="keyword">else</span> ans=ans*radix+str[i]-<span class="string">'a'</span>+<span class="number">10</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">string</span> a,b;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> radix,tag,n1,n2;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b&gt;&gt;tag&gt;&gt;radix;</span><br><span class="line">	<span class="keyword">if</span>(tag==<span class="number">2</span>) swap(a,b);</span><br><span class="line">	n1=todecimal(a,radix);</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> left=<span class="number">0</span>,temp;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;b.length();i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">isdigit</span>(b[i])) temp=b[i]-<span class="string">'0'</span>;</span><br><span class="line">		<span class="keyword">else</span> temp=b[i]-<span class="string">'a'</span>+<span class="number">10</span>;</span><br><span class="line">		<span class="keyword">if</span>(temp&gt;left) left=temp;</span><br><span class="line">	&#125;</span><br><span class="line">	left++;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> right=<span class="built_in">max</span>(left,n1);</span><br><span class="line">	<span class="keyword">while</span>(left&lt;=right)&#123;</span><br><span class="line">		<span class="keyword">long</span> <span class="keyword">long</span> mid=(left+right)/<span class="number">2</span>;</span><br><span class="line">		n2=todecimal(b,mid);</span><br><span class="line">		<span class="keyword">if</span>(n2==n1) &#123;<span class="built_in">cout</span>&lt;&lt;mid; <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(n2&gt;n1||n2&lt;<span class="number">0</span>) right=mid<span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(n2&lt;n1) left=mid+<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"Impossible"</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>:二分范围是left&lt;=right（请思考为什么加等号），在判断n1,n2的相对大小时有一个条件n2&lt;0，这是因为当一个正数在计算机里变成负数时表明这个正数溢出了，至于为什么，需要各位去看看《计算机组成原理》里关于计算机内部码制以及数据在计算机内部的表示方法，这里就不再提及，你只需要知道正数在计算机里变成负数表示这个正数比这种型号的计算机能够表示的最大正数还要大，负数变成正数一样的意思。</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/PAT-Advanced-Level/" rel="tag">PAT(Advanced Level)</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/weixinpay.png" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/28/1011-World-Cup-Betting/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">1011 World Cup Betting</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/28/1009-Product-of-Polynomials/">
+                <span class="level-item">1009 Product of Polynomials</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
                 
 
 
@@ -675,7 +793,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/kt.jpg" alt="为了星辰大海" height="28">
+                    <img src="/images/kt.jpg" alt="1010 Radix" height="28">
                 
                 </a>
                 <p class="is-size-7">

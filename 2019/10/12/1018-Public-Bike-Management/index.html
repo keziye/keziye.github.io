@@ -7,20 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>分类 - 为了星辰大海</title>
+<title>1018 Public Bike Management - 为了星辰大海</title>
 
 
-    <meta name="description" content="新人码农，还在学习中">
-<meta property="og:type" content="website">
-<meta property="og:title" content="为了星辰大海">
-<meta property="og:url" content="https://keziye.github.io/categories/index.html">
+    <meta name="description" content="原题链接：1018">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1018 Public Bike Management">
+<meta property="og:url" content="https://keziye.github.io/2019/10/12/1018-Public-Bike-Management/index.html">
 <meta property="og:site_name" content="为了星辰大海">
-<meta property="og:description" content="新人码农，还在学习中">
+<meta property="og:description" content="原题链接：1018">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://keziye.github.io/images/og_image.png">
+<meta property="article:published_time" content="2019-10-12T10:06:11.000Z">
+<meta property="article:modified_time" content="2019-10-19T06:47:19.363Z">
 <meta property="article:author" content="keziye">
 <meta property="article:tag" content="PAT(Advanced Level)">
-<meta property="article:tag" content="start">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://keziye.github.io/images/og_image.png">
 
@@ -28,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="为了星辰大海" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="1018 Public Bike Management" type="application/atom+xml">
 
 
 
@@ -80,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/kt.jpg" alt="为了星辰大海" height="28">
+                <img src="/images/kt.jpg" alt="1018 Public Bike Management" height="28">
             
             </a>
         </div>
@@ -94,7 +95,7 @@
                 <a class="navbar-item"
                 href="/archives">归档</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/categories">分类</a>
                 
                 <a class="navbar-item"
@@ -130,18 +131,126 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-12T10:06:11.000Z">2019-10-12</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 492 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-            </ul>
+                1018 Public Bike Management
+            
+        </h1>
+        <div class="content">
+            <p><strong>原题链接</strong>：<a href="https://pintia.cn/problem-sets/994805342720868352/problems/994805489282433024">1018</a></p>
+<a id="more"></a>
+
+<p><strong>题目大意</strong>：为了方便对每个共享单车站进行车辆数目管理，如果一个自行车站数目是Cmax的一半那么就是完美的状态（多于Cmax的部分在遍历过程会被带回起点，少于Cmax的会从起点或者沿途超过Cmax的车站带过去补充），现在有一幅关于几个自行车站的地图以及每个站内的自行车数目，需要你给出从起点遍历完整幅图所走的最短路径，如果路径一样短，那么选择从起点带去最少数量的那一条，如果带去车的数量一样，那么选择带回数量最少的那一条。</p>
+<p><strong>Sample Input</strong>:</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">10 </span><span class="number">3</span> <span class="number">3</span> <span class="number">5</span></span><br><span class="line"><span class="symbol">6 </span><span class="number">7</span> <span class="number">0</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">2</span> <span class="number">1</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">3</span> <span class="number">3</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">3</span> <span class="number">1</span></span><br><span class="line"><span class="symbol">2 </span><span class="number">3</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Sample Output</strong>:</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">3 </span><span class="number">0</span>-&gt;<span class="number">2</span>-&gt;<span class="number">3</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>思路</strong>:这是一道关于最短路径的题，但无法单独使用Dijkstra算法解决，因为带回和带去自行车的数量不是跟随路径变化而变的，需要遍历完找到一条确定路径才可以得到具体数量，所以此题需要使用Dijkstra+DFS。相信碰到这么多次关于最短路径的题目各位应该不陌生了，所以我就直接给出AC代码了。</p>
+<p><strong>代码</strong>：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">520</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf=<span class="number">1</span>&lt;&lt;<span class="number">31</span><span class="number">-1</span>;</span><br><span class="line"><span class="keyword">int</span> G[maxn][maxn],dis[maxn],weight[maxn];</span><br><span class="line"><span class="keyword">bool</span> vis[maxn];</span><br><span class="line"><span class="keyword">int</span> Cmax,n,Spl,m,MinNeed=inf,MinBack=inf;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;pre[maxn],path,temp;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dijkstra</span><span class="params">(<span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">	<span class="built_in">fill</span>(dis,dis+maxn,inf);</span><br><span class="line">	<span class="built_in">fill</span>(vis,vis+maxn,<span class="literal">false</span>);</span><br><span class="line">	dis[index]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> u=<span class="number">-1</span>,Min=inf;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=n;j++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(vis[j]==<span class="literal">false</span>&amp;&amp;dis[j]&lt;Min)&#123;</span><br><span class="line">				Min=dis[j];</span><br><span class="line">				u=j;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(u==<span class="number">-1</span>) <span class="keyword">return</span> ;</span><br><span class="line">		vis[u]=<span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> v=<span class="number">0</span>;v&lt;=n;v++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(vis[v]==<span class="literal">false</span>&amp;&amp;G[u][v]!=inf)&#123;</span><br><span class="line">				<span class="keyword">if</span>(dis[u]+G[u][v]&lt;dis[v])&#123;</span><br><span class="line">					dis[v]=dis[u]+G[u][v];</span><br><span class="line">					pre[v].<span class="built_in">clear</span>();</span><br><span class="line">					pre[v].push_back(u);</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span>(dis[u]+G[u][v]==dis[v]) pre[v].push_back(u);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">	temp.push_back(index);</span><br><span class="line">	<span class="keyword">if</span>(index==<span class="number">0</span>)&#123;</span><br><span class="line">		<span class="keyword">int</span> need=<span class="number">0</span>,back=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=temp.<span class="built_in">size</span>()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">			<span class="keyword">if</span>(weight[temp[i]]&gt;<span class="number">0</span>) back+=weight[temp[i]];</span><br><span class="line">			<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="keyword">if</span>(back&gt;<span class="built_in">abs</span>(weight[temp[i]])) back-=<span class="built_in">abs</span>(weight[temp[i]]);</span><br><span class="line">				<span class="keyword">else</span>&#123;</span><br><span class="line">					need+=<span class="built_in">abs</span>(weight[temp[i]])-back;</span><br><span class="line">					back=<span class="number">0</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(need&lt;MinNeed)&#123;</span><br><span class="line">			MinNeed=need;</span><br><span class="line">			MinBack=back;</span><br><span class="line">			path=temp;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(need==MinNeed&amp;&amp;back&lt;MinBack)&#123;</span><br><span class="line">			MinBack=back;</span><br><span class="line">			path=temp;</span><br><span class="line">		&#125;</span><br><span class="line">		temp.pop_back();</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;pre[index].<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">		DFS(pre[index][i]);</span><br><span class="line">	&#125;</span><br><span class="line">	temp.pop_back();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;Cmax&gt;&gt;n&gt;&gt;Spl&gt;&gt;m;</span><br><span class="line">	<span class="built_in">fill</span>(G[<span class="number">0</span>],G[<span class="number">0</span>]+maxn*maxn,inf);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;weight[i];</span><br><span class="line">		weight[i]-=Cmax/<span class="number">2</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> u,v,edge;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;u&gt;&gt;v&gt;&gt;edge;</span><br><span class="line">		G[u][v]=G[v][u]=edge;</span><br><span class="line">	&#125;</span><br><span class="line">	Dijkstra(<span class="number">0</span>);</span><br><span class="line">	DFS(Spl);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;MinNeed&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=path.<span class="built_in">size</span>()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;path[i];</span><br><span class="line">		<span class="keyword">if</span>(i&gt;<span class="number">0</span>) <span class="built_in">cout</span>&lt;&lt;<span class="string">"-&gt;"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;MinBack;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/PAT-Advanced-Level/" rel="tag">PAT(Advanced Level)</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/weixinpay.png" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/12/1019-General-Palindromic-Number/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">1019 General Palindromic Number</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/12/1017-Queueing-at-Bank/">
+                <span class="level-item">1017 Queueing at Bank</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
                 
 
 
@@ -675,7 +784,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/kt.jpg" alt="为了星辰大海" height="28">
+                    <img src="/images/kt.jpg" alt="1018 Public Bike Management" height="28">
                 
                 </a>
                 <p class="is-size-7">

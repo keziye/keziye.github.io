@@ -7,20 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>分类 - 为了星辰大海</title>
+<title>1014 Waiting in Line - 为了星辰大海</title>
 
 
-    <meta name="description" content="新人码农，还在学习中">
-<meta property="og:type" content="website">
-<meta property="og:title" content="为了星辰大海">
-<meta property="og:url" content="https://keziye.github.io/categories/index.html">
+    <meta name="description" content="原题链接：1014">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1014 Waiting in Line">
+<meta property="og:url" content="https://keziye.github.io/2019/10/12/1014-Waiting-in-Line/index.html">
 <meta property="og:site_name" content="为了星辰大海">
-<meta property="og:description" content="新人码农，还在学习中">
+<meta property="og:description" content="原题链接：1014">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://keziye.github.io/images/og_image.png">
+<meta property="article:published_time" content="2019-10-12T10:02:12.000Z">
+<meta property="article:modified_time" content="2019-10-19T06:52:17.714Z">
 <meta property="article:author" content="keziye">
 <meta property="article:tag" content="PAT(Advanced Level)">
-<meta property="article:tag" content="start">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://keziye.github.io/images/og_image.png">
 
@@ -28,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="为了星辰大海" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="1014 Waiting in Line" type="application/atom+xml">
 
 
 
@@ -80,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/kt.jpg" alt="为了星辰大海" height="28">
+                <img src="/images/kt.jpg" alt="1014 Waiting in Line" height="28">
             
             </a>
         </div>
@@ -94,7 +95,7 @@
                 <a class="navbar-item"
                 href="/archives">归档</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/categories">分类</a>
                 
                 <a class="navbar-item"
@@ -130,18 +131,126 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-12T10:02:12.000Z">2019-10-12</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 503 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-            </ul>
+                1014 Waiting in Line
+            
+        </h1>
+        <div class="content">
+            <p><strong>原题链接</strong>：<a href="https://pintia.cn/problem-sets/994805342720868352/problems/994805498207911936">1014</a></p>
+<a id="more"></a>
+
+<p><strong>题目大意</strong>：模拟一个银行排队，银行有N个服务窗口，每个窗口前有一条黄线把队列分成两个部分，排队规则如下，在每个窗口黄线里可以容纳M个顾客，因此当N个窗口被排满，那么下一位顾客（序号N*M+1）必须在黄线外等候服务。当每个顾客要进入黄线内时都会选择最短的队列排队，如果有两条队列长度一样，那么顾客就会选择编号最小的一条队列排队。每一名顾客都需要一定时间完成服务。第一个顾客假定在8：00到达。请计算出给出的查询编号顾客服务完成的时间，如果超出17：00，银行关闭，输出sorry。</p>
+<p><strong>Sample Input</strong>:</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">2 </span><span class="number">2</span> <span class="number">7</span> <span class="number">5</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">2</span> <span class="number">6</span> <span class="number">4</span> <span class="number">3</span> <span class="number">534</span> <span class="number">2</span></span><br><span class="line"><span class="symbol">3 </span><span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Sample Output</strong>:</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">08</span>:<span class="number">07</span></span><br><span class="line"><span class="number">08</span>:<span class="number">06</span></span><br><span class="line"><span class="number">08</span>:<span class="number">10</span></span><br><span class="line"><span class="number">17</span>:<span class="number">00</span></span><br><span class="line">Sorry</span><br></pre></td></tr></table></figure>
+
+<p><strong>思路</strong>：通过手动模拟，可以发现每次每个顾客都选择当前最优的情况，就是局部最优，所以可以使用一个数组记录每个顾客结束服务的时间，最后减去服务时间，如果大于17：00，输出sorry，小于则正常输出，需要注意对N<em>M后的顾客入队顺序，有几个窗口就建立几个结构体（包含一条队列，窗口结束工作的时间，队列里每个当前队头出队的时间）。关于（N</em>M）之后的顾客遍历顺序有点像Dijkstra的部分，详情请看代码，建议手动模拟一下案例。</p>
+<p><strong>代码</strong>：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1010</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,k,query,q;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">convertToMinute</span><span class="params">(<span class="keyword">int</span> h,<span class="keyword">int</span> m)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> h*<span class="number">60</span>+m;</span><br><span class="line">&#125; </span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Window</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> endtime,poptime;</span><br><span class="line">	<span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;q;</span><br><span class="line">&#125;window[<span class="number">20</span>];</span><br><span class="line"><span class="keyword">int</span> ans[maxn],needtime[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> Index=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;n,&amp;m,&amp;k,&amp;query);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k;i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;needtime[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		window[i].endtime=window[i].poptime=convertToMinute(<span class="number">8</span>,<span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">min</span>(n*m,k);i++)&#123;</span><br><span class="line">		window[Index%n].q.push(Index);</span><br><span class="line">		window[Index%n].endtime+=needtime[Index];</span><br><span class="line">		<span class="keyword">if</span>(Index&lt;n) window[Index%n].poptime=needtime[Index];</span><br><span class="line">		ans[Index]=window[Index%n].endtime;</span><br><span class="line">		Index++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(;Index&lt;k;Index++)&#123;</span><br><span class="line">		<span class="keyword">int</span> idx=<span class="number">-1</span>,minPoptime=<span class="number">1</span>&lt;&lt;<span class="number">30</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(window[i].poptime&lt;minPoptime)&#123;</span><br><span class="line">				idx=i;</span><br><span class="line">				minPoptime=window[i].poptime;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		Window&amp; w=window[idx];</span><br><span class="line">		w.q.pop();</span><br><span class="line">		w.q.push(Index);</span><br><span class="line">		w.endtime+=needtime[Index];</span><br><span class="line">		w.poptime+=needtime[w.q.front()];</span><br><span class="line">		ans[Index]=w.endtime;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;query;i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;q);</span><br><span class="line">		<span class="keyword">if</span>(ans[q<span class="number">-1</span>]-needtime[q<span class="number">-1</span>]&gt;=convertToMinute(<span class="number">17</span>,<span class="number">0</span>))&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"Sorry\n"</span>);</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%02d:%02d\n"</span>,ans[q<span class="number">-1</span>]/<span class="number">60</span>,ans[q<span class="number">-1</span>]%<span class="number">60</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/PAT-Advanced-Level/" rel="tag">PAT(Advanced Level)</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/weixinpay.png" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/12/1015-Reversible-Primes/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">1015 Reversible Primes</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/12/1013-Battle-Over-Cities/">
+                <span class="level-item">1013 Battle Over Cities</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
                 
 
 
@@ -675,7 +784,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/kt.jpg" alt="为了星辰大海" height="28">
+                    <img src="/images/kt.jpg" alt="1014 Waiting in Line" height="28">
                 
                 </a>
                 <p class="is-size-7">

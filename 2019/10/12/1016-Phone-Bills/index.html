@@ -7,20 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>分类 - 为了星辰大海</title>
+<title>1016 Phone Bills - 为了星辰大海</title>
 
 
-    <meta name="description" content="新人码农，还在学习中">
-<meta property="og:type" content="website">
-<meta property="og:title" content="为了星辰大海">
-<meta property="og:url" content="https://keziye.github.io/categories/index.html">
+    <meta name="description" content="原题链接：1016">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1016 Phone Bills">
+<meta property="og:url" content="https://keziye.github.io/2019/10/12/1016-Phone-Bills/index.html">
 <meta property="og:site_name" content="为了星辰大海">
-<meta property="og:description" content="新人码农，还在学习中">
+<meta property="og:description" content="原题链接：1016">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://keziye.github.io/images/og_image.png">
+<meta property="article:published_time" content="2019-10-12T10:04:17.000Z">
+<meta property="article:modified_time" content="2019-10-19T06:50:11.628Z">
 <meta property="article:author" content="keziye">
 <meta property="article:tag" content="PAT(Advanced Level)">
-<meta property="article:tag" content="start">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://keziye.github.io/images/og_image.png">
 
@@ -28,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="为了星辰大海" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="1016 Phone Bills" type="application/atom+xml">
 
 
 
@@ -80,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/kt.jpg" alt="为了星辰大海" height="28">
+                <img src="/images/kt.jpg" alt="1016 Phone Bills" height="28">
             
             </a>
         </div>
@@ -94,7 +95,7 @@
                 <a class="navbar-item"
                 href="/archives">归档</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/categories">分类</a>
                 
                 <a class="navbar-item"
@@ -130,18 +131,126 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-12T10:04:17.000Z">2019-10-12</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 420 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-            </ul>
+                1016 Phone Bills
+            
+        </h1>
+        <div class="content">
+            <p><strong>原题链接</strong>：<a href="https://pintia.cn/problem-sets/994805342720868352/problems/994805493648703488">1016</a></p>
+<a id="more"></a>
+
+<p><strong>题目大意</strong>：给一串通话记录，需要给出每个用户每个月的花费。其中每个用户正确的通话记录先由“on-line”再到“off-line”，其中需要两条记录相邻，因为这样一对记录才是正常的，如果有“on-line”没有“off-line”匹配就算记录作废，反之“off-line”亦然。另外也给出了每个月的费率。</p>
+<p><strong>Sample Input</strong>:</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span> <span class="number">10</span> <span class="number">10</span> <span class="number">10</span> <span class="number">10</span> <span class="number">10</span> <span class="number">20</span> <span class="number">20</span> <span class="number">20</span> <span class="number">15</span> <span class="number">15</span> <span class="number">15</span> <span class="number">15</span> <span class="number">15</span> <span class="number">15</span> <span class="number">15</span> <span class="number">20</span> <span class="number">30</span> <span class="number">20</span> <span class="number">15</span> <span class="number">15</span> <span class="number">10</span> <span class="number">10</span> <span class="number">10</span></span><br><span class="line"><span class="number">10</span></span><br><span class="line">CYLL <span class="number">01</span>:<span class="number">01</span>:<span class="number">06</span>:<span class="number">01</span> on-line</span><br><span class="line">CYLL <span class="number">01</span>:<span class="number">28</span>:<span class="number">16</span>:<span class="number">05</span> off-line</span><br><span class="line">CYJJ <span class="number">01</span>:<span class="number">01</span>:<span class="number">07</span>:<span class="number">00</span> off-line</span><br><span class="line">CYLL <span class="number">01</span>:<span class="number">01</span>:<span class="number">08</span>:<span class="number">03</span> off-line</span><br><span class="line">CYJJ <span class="number">01</span>:<span class="number">01</span>:<span class="number">05</span>:<span class="number">59</span> on-line</span><br><span class="line">aaa <span class="number">01</span>:<span class="number">01</span>:<span class="number">01</span>:<span class="number">03</span> on-line</span><br><span class="line">aaa <span class="number">01</span>:<span class="number">02</span>:<span class="number">00</span>:<span class="number">01</span> on-line</span><br><span class="line">CYLL <span class="number">01</span>:<span class="number">28</span>:<span class="number">15</span>:<span class="number">41</span> on-line</span><br><span class="line">aaa <span class="number">01</span>:<span class="number">05</span>:<span class="number">02</span>:<span class="number">24</span> on-line</span><br><span class="line">aaa <span class="number">01</span>:<span class="number">04</span>:<span class="number">23</span>:<span class="number">59</span> off-line</span><br></pre></td></tr></table></figure>
+
+<p><strong>Sample Output</strong>:</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CYJJ <span class="number">01</span></span><br><span class="line"><span class="number">01</span>:<span class="number">05</span>:<span class="number">59</span> <span class="number">01</span>:<span class="number">07</span>:<span class="number">00</span> <span class="number">61</span> $<span class="number">12.10</span></span><br><span class="line">Total amount: $<span class="number">12.10</span></span><br><span class="line">CYLL <span class="number">01</span></span><br><span class="line"><span class="number">01</span>:<span class="number">06</span>:<span class="number">01</span> <span class="number">01</span>:<span class="number">08</span>:<span class="number">03</span> <span class="number">122</span> $<span class="number">24.40</span></span><br><span class="line"><span class="number">28</span>:<span class="number">15</span>:<span class="number">41</span> <span class="number">28</span>:<span class="number">16</span>:<span class="number">05</span> <span class="number">24</span> $<span class="number">3.85</span></span><br><span class="line">Total amount: $<span class="number">28.25</span></span><br><span class="line">aaa <span class="number">01</span></span><br><span class="line"><span class="number">02</span>:<span class="number">00</span>:<span class="number">01</span> <span class="number">04</span>:<span class="number">23</span>:<span class="number">59</span> <span class="number">4318</span> $<span class="number">638.80</span></span><br><span class="line">Total amount: $<span class="number">638.80</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>思路</strong>:先进行排序，相邻两个结点前一个为“on-line”状态后一个为“off-line”才可以进入getsum函数进行per minute的累加，直到两个状态时间相同,注意日期的进位。</p>
+<p><strong>代码</strong>：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	<span class="built_in">string</span> id,status;</span><br><span class="line">	<span class="keyword">int</span> month,dd,hh,mm;</span><br><span class="line">&#125;res[<span class="number">1010</span>];</span><br><span class="line"><span class="keyword">int</span> n,toll[<span class="number">24</span>];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node a,node b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(a.id!=b.id) <span class="keyword">return</span> a.id&lt;b.id;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(a.month!=b.month) <span class="keyword">return</span> a.month&lt;b.month;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(a.dd!=b.dd) <span class="keyword">return</span> a.dd&lt;b.dd;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(a.hh!=b.hh) <span class="keyword">return</span> a.hh&lt;b.hh;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> a.mm&lt;b.mm;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getSum</span><span class="params">(node a,node b,<span class="keyword">int</span>&amp; time,<span class="keyword">int</span>&amp; money)</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(a.dd!=b.dd||a.hh!=b.hh||a.mm!=b.mm)&#123;</span><br><span class="line">		money+=toll[a.hh];</span><br><span class="line">		time++;</span><br><span class="line">		a.mm++;</span><br><span class="line">		<span class="keyword">if</span>(a.mm==<span class="number">60</span>)&#123;</span><br><span class="line">			a.mm=<span class="number">0</span>;</span><br><span class="line">			a.hh++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(a.hh==<span class="number">24</span>)&#123;</span><br><span class="line">			a.hh=<span class="number">0</span>;</span><br><span class="line">			a.dd++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">24</span>;i++) <span class="built_in">cin</span>&gt;&gt;toll[i];</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;res[i].id;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d:%d:%d:%d"</span>,&amp;res[i].month,&amp;res[i].dd,&amp;res[i].hh,&amp;res[i].mm);</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;res[i].status;</span><br><span class="line">	&#125;</span><br><span class="line">	sort(res,res+n,cmp);</span><br><span class="line">	<span class="keyword">int</span> flag=<span class="number">0</span>,totle=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(res[i].id==res[i+<span class="number">1</span>].id&amp;&amp;res[i].status==<span class="string">"on-line"</span>&amp;&amp;res[i+<span class="number">1</span>].status==<span class="string">"off-line"</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span>(flag==<span class="number">0</span>)&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%s %02d\n"</span>,res[i].id.c_str(),res[i].month);</span><br><span class="line">				flag=<span class="number">1</span>;</span><br><span class="line">		    &#125;</span><br><span class="line">		    <span class="built_in">printf</span>(<span class="string">"%02d:%02d:%02d %02d:%02d:%02d "</span>,res[i].dd,res[i].hh,res[i].mm,res[i+<span class="number">1</span>].dd,res[i+<span class="number">1</span>].hh,res[i+<span class="number">1</span>].mm);</span><br><span class="line">		    <span class="keyword">int</span> time=<span class="number">0</span>,money=<span class="number">0</span>;</span><br><span class="line">		    getSum(res[i],res[i+<span class="number">1</span>],time,money);</span><br><span class="line">		    totle+=money;</span><br><span class="line">		    <span class="built_in">printf</span>(<span class="string">"%d $%.2f\n"</span>,time,money/<span class="number">100.0</span>);</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(res[i].id!=res[i+<span class="number">1</span>].id)&#123;</span><br><span class="line">			<span class="keyword">if</span>(flag==<span class="number">1</span>) <span class="built_in">printf</span>(<span class="string">"Total amount: $%.2f\n"</span>,totle/<span class="number">100.0</span>);</span><br><span class="line">			totle=<span class="number">0</span>;</span><br><span class="line">			flag=<span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/PAT-Advanced-Level/" rel="tag">PAT(Advanced Level)</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/weixinpay.png" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/12/1017-Queueing-at-Bank/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">1017 Queueing at Bank</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/12/1015-Reversible-Primes/">
+                <span class="level-item">1015 Reversible Primes</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
                 
 
 
@@ -675,7 +784,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/kt.jpg" alt="为了星辰大海" height="28">
+                    <img src="/images/kt.jpg" alt="1016 Phone Bills" height="28">
                 
                 </a>
                 <p class="is-size-7">

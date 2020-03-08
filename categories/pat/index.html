@@ -7,21 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>1003 Emergency - 为了星辰大海</title>
+<title>分类: pat - 为了星辰大海</title>
 
 
-    <meta name="description" content="原题链接：1003">
-<meta property="og:type" content="article">
-<meta property="og:title" content="1003 Emergency">
-<meta property="og:url" content="https://keziye.github.io/2019/09/13/1003-Emergency/index.html">
+    <meta name="description" content="新人码农，还在学习中">
+<meta property="og:type" content="website">
+<meta property="og:title" content="为了星辰大海">
+<meta property="og:url" content="https://keziye.github.io/categories/pat/index.html">
 <meta property="og:site_name" content="为了星辰大海">
-<meta property="og:description" content="原题链接：1003">
+<meta property="og:description" content="新人码农，还在学习中">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://keziye.github.io/images/og_image.png">
-<meta property="article:published_time" content="2019-09-13T05:04:25.000Z">
-<meta property="article:modified_time" content="2019-09-13T05:30:22.202Z">
 <meta property="article:author" content="keziye">
-<meta property="article:tag" content="PAT(Advanced Level)">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://keziye.github.io/images/og_image.png">
 
@@ -29,7 +26,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="1003 Emergency" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="为了星辰大海" type="application/atom+xml">
 
 
 
@@ -81,7 +78,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/kt.jpg" alt="1003 Emergency" height="28">
+                <img src="/images/kt.jpg" alt="为了星辰大海" height="28">
             
             </a>
         </div>
@@ -130,130 +127,134 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">分类</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">pat</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    
 <div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/10/19/1024-Palindromic-Number/" class="image is-7by1">
+            <img class="thumbnail" src="/galley/ts1.jpg" alt="1024 Palindromic Number">
+        </a>
+    </div>
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-13T05:04:25.000Z">2019-09-13</time>
+                <time class="level-item has-text-grey" datetime="2019-10-19T06:20:38.000Z">2019-10-19</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/pat/">pat</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 612 个字)
+                    2 分钟 读完 (大约 232 个字)
                 </span>
                 
-                
-                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
-                    <i class="far fa-eye"></i>
-                    <span id="busuanzi_value_page_pv">0</span>次访问
-                </span>
                 
             </div>
         </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                1003 Emergency
+                <a class="has-link-black-ter" href="/2019/10/19/1024-Palindromic-Number/">1024 Palindromic Number</a>
             
         </h1>
         <div class="content">
-            <p><strong>原题链接</strong>：<a href="https://pintia.cn/problem-sets/994805342720868352/problems/994805523835109376">1003</a></p>
-<a id="more"></a>
-
-<p><strong>题目大意</strong>:给出几个城市之间的路径与距离和这几个城市的权值，需要你在给出的起点和终点里寻找最短路径同时保证路径上经过的城市总权值尽可能大，输出最短路径条数和所有路径中的最大权值。</p>
-<p><strong>Sample Input</strong>:</p>
-<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">5 </span><span class="number">6</span> <span class="number">0</span> <span class="number">2</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">2</span> <span class="number">1</span> <span class="number">5</span> <span class="number">3</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">2</span> <span class="number">2</span></span><br><span class="line"><span class="symbol">0 </span><span class="number">3</span> <span class="number">1</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">2</span> <span class="number">1</span></span><br><span class="line"><span class="symbol">2 </span><span class="number">4</span> <span class="number">1</span></span><br><span class="line"><span class="symbol">3 </span><span class="number">4</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>Sample Output</strong>:</p>
-<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">2 </span><span class="number">4</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>思路</strong>：典型的Dijkstra算法求最短路径，但题目除了要求路径最短外还有第二标尺，即路径上的权值之和要越大，还有一个额外工作统计最短路径条数，两种方法解决此类问题，Dijkstra算法或Dijkstra+DFS。</p>
-<p><strong>代码</strong>：<br>Dijkstra算法：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf=<span class="number">999999</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">520</span>;</span><br><span class="line"><span class="keyword">int</span> a[maxn][maxn],weight[maxn],dis[maxn],num[maxn],w[maxn];</span><br><span class="line"><span class="keyword">bool</span> vis[maxn];</span><br><span class="line"><span class="keyword">int</span> n,m,st,ed;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dijkstra</span><span class="params">(<span class="keyword">int</span> st)</span></span>&#123;</span><br><span class="line">	<span class="built_in">fill</span>(dis,dis+maxn,inf);</span><br><span class="line">	<span class="built_in">fill</span>(vis,vis+maxn,<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">fill</span>(w,w+maxn,<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">fill</span>(num,num+maxn,<span class="number">0</span>);</span><br><span class="line">	dis[st]=<span class="number">0</span>;</span><br><span class="line">	w[st]=weight[st];</span><br><span class="line">	num[st]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> u=<span class="number">-1</span>,<span class="built_in">min</span>=inf;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(vis[j]==<span class="literal">false</span>&amp;&amp;dis[j]&lt;<span class="built_in">min</span>)&#123;</span><br><span class="line">				u=j;</span><br><span class="line">				<span class="built_in">min</span>=dis[j];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(u==<span class="number">-1</span>) <span class="keyword">return</span> ;</span><br><span class="line">		vis[u]=<span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> v=<span class="number">0</span>;v&lt;n;v++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(vis[v]==<span class="literal">false</span>&amp;&amp;a[u][v]!=inf)&#123;</span><br><span class="line">				<span class="keyword">if</span>(dis[v]&gt;dis[u]+a[u][v])&#123;</span><br><span class="line">					dis[v]=dis[u]+a[u][v];</span><br><span class="line">					w[v]=w[u]+weight[v];</span><br><span class="line">					num[v]=num[u];</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span>(dis[v]==dis[u]+a[u][v])&#123;</span><br><span class="line">					<span class="keyword">if</span>(w[v]&lt;w[u]+weight[v])&#123;</span><br><span class="line">						w[v]=w[u]+weight[v];</span><br><span class="line">					&#125;</span><br><span class="line">					num[v]+=num[u];   <span class="comment">//num[u]是到U的最短路径的条数，因为距离相等所以到u的条数等于到v的条数 </span></span><br><span class="line">				&#125;                      <span class="comment">//但由于此时又有其他到V的路径长度一样所以加上其他到V的路径条数 </span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m&gt;&gt;st&gt;&gt;ed;</span><br><span class="line">	<span class="built_in">fill</span>(a[<span class="number">0</span>],a[<span class="number">0</span>]+maxn*maxn,inf);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;weight[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> u,v,temp;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;u&gt;&gt;v&gt;&gt;temp;</span><br><span class="line">		a[u][v]=a[v][u]=temp;</span><br><span class="line">	&#125;</span><br><span class="line">	dijkstra(st);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;num[ed]&lt;&lt;<span class="string">" "</span>&lt;&lt;w[ed];</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Dijksrta+DFS:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf=<span class="number">999999</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">520</span>;</span><br><span class="line"><span class="keyword">int</span> a[maxn][maxn],weight[maxn],dis[maxn];</span><br><span class="line"><span class="keyword">int</span> n,m,st,ed,num=<span class="number">0</span>,maxWeight=<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">bool</span> vis[maxn];</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;pre[maxn],temp;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dijkstra</span><span class="params">(<span class="keyword">int</span> st)</span></span>&#123;</span><br><span class="line">	<span class="built_in">fill</span>(dis,dis+maxn,inf);</span><br><span class="line">	<span class="built_in">fill</span>(vis,vis+maxn,<span class="literal">false</span>);</span><br><span class="line">	dis[st]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> u=<span class="number">-1</span>,<span class="built_in">min</span>=inf;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(vis[j]==<span class="literal">false</span>&amp;&amp;dis[j]&lt;<span class="built_in">min</span>)&#123;</span><br><span class="line">				u=j;</span><br><span class="line">				<span class="built_in">min</span>=dis[j];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(u==<span class="number">-1</span>) <span class="keyword">return</span> ;</span><br><span class="line">		vis[u]=<span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> v=<span class="number">0</span>;v&lt;n;v++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(vis[v]==<span class="literal">false</span>&amp;&amp;a[u][v]!=inf)&#123;</span><br><span class="line">				<span class="keyword">if</span>(dis[u]+a[u][v]&lt;dis[v])&#123;</span><br><span class="line">                    dis[v]=dis[u]+a[u][v];</span><br><span class="line">					pre[v].<span class="built_in">clear</span>();</span><br><span class="line">                    pre[v].push_back(u);</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span>(dis[u]+a[u][v]==dis[v]) pre[v].push_back(u);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(index==st)&#123;</span><br><span class="line">		temp.push_back(index);</span><br><span class="line">		num++;</span><br><span class="line">		<span class="keyword">int</span> value=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=temp.<span class="built_in">size</span>()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">			value+=weight[temp[i]];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(value&gt;maxWeight) maxWeight=value;</span><br><span class="line">		temp.pop_back();</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	temp.push_back(index);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;pre[index].<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">		dfs(pre[index][i]);</span><br><span class="line">	&#125;</span><br><span class="line">	temp.pop_back();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m&gt;&gt;st&gt;&gt;ed;</span><br><span class="line">	<span class="built_in">fill</span>(a[<span class="number">0</span>],a[<span class="number">0</span>]+maxn*maxn,inf);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;weight[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> u,v,temp;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;u&gt;&gt;v&gt;&gt;temp;</span><br><span class="line">		a[u][v]=a[v][u]=temp;</span><br><span class="line">	&#125;</span><br><span class="line">	dijkstra(st);</span><br><span class="line">	dfs(ed);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;num&lt;&lt;<span class="string">" "</span>&lt;&lt;maxWeight;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>总结</strong>:比较两种算法，Dijkstra+DFS代码量要少一点，因为Dijkstra算法完成后得到的最短路径就是一棵树，使用DFS对树遍历时只需考虑第二标尺，就算在第二标尺的条件下还有第三标尺，第四标尺等等都可以使用这种思想，我的理解是相当与在一个集合里寻找符合第一标尺的结点构成的子集，然后在这个子集里寻找满足第二标尺的子集，依此类推。但Dijkstra不易出错，还是建议使用Dijkstra。</p>
-<p>Right now,<br>Please burn your soul,<br>Neck or noting!<br><a href="https://music.163.com/#/song?id=34613438">BRE@TH//LESS</a></p>
-
+            <p><strong>原题链接</strong>：<a href="https://pintia.cn/problem-sets/994805342720868352/problems/994805476473028608">1024</a></p>
         </div>
         
-        <div class="level is-size-7 is-uppercase">
+        
+        <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/PAT-Advanced-Level/" rel="tag">PAT(Advanced Level)</a>
+                <a class="button is-size-7 is-light" href="/2019/10/19/1024-Palindromic-Number/#more">阅读更多</a>
                 </div>
             </div>
         </div>
         
         
-        
-        <div class="social-share"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
-<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
-        
     </div>
 </div>
 
 
 
+
+
+
+
+
+    
 <div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
+    
+    <div class="card-image">
+        <a href="/2019/09/13/1001-A-B-Format/" class="image is-7by1">
+            <img class="thumbnail" src="/1001-A-B-Format/ts1.jpg" alt="1001 A+B Format">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-09-13T03:48:32.000Z">2019-09-13</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/pat/">pat</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 262 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                
-<a class="button is-info donate">
-    <span class="icon is-small">
-        <i class="fab fa-alipay"></i>
-    </span>
-    <span>支付宝</span>
-    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
-</a>
-
-                
-                
-<a class="button is-success donate">
-    <span class="icon is-small">
-        <i class="fab fa-weixin"></i>
-    </span>
-    <span>微信</span>
-    <div class="qrcode"><img src="/images/weixinpay.png" alt="微信"></div>
-</a>
-
-                
+                <a class="has-link-black-ter" href="/2019/09/13/1001-A-B-Format/">1001 A+B Format</a>
+            
+        </h1>
+        <div class="content">
+            <p><strong>原题链接</strong>：<a href="https://pintia.cn/problem-sets/994805342720868352/problems/994805528788582400">1001</a></p>
         </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/09/13/1001-A-B-Format/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
     </div>
 </div>
 
 
 
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/13/1004-Counting-Leaves/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">1004 Counting Leaves</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/13/1002-A-B-For-Polynomials/">
-                <span class="level-item">1002 A+B For Polynomials</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
-    </div>
-</div>
+
+
+
 
 
 </div>
@@ -798,7 +799,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/kt.jpg" alt="1003 Emergency" height="28">
+                    <img src="/images/kt.jpg" alt="为了星辰大海" height="28">
                 
                 </a>
                 <p class="is-size-7">

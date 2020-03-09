@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://keziye.github.io/gallery/ts7.jpg">
 <meta property="article:published_time" content="2020-03-08T12:39:20.000Z">
-<meta property="article:modified_time" content="2020-03-08T13:22:42.459Z">
+<meta property="article:modified_time" content="2020-03-09T05:49:12.714Z">
 <meta property="article:author" content="keziye">
 <meta property="article:tag" content="pat真题">
 <meta name="twitter:card" content="summary">
@@ -153,7 +153,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 641 个字)
+                    4 分钟 读完 (大约 640 个字)
                 </span>
                 
                 
@@ -190,7 +190,7 @@
 <p><strong>Sample Output</strong>:</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">Yes</span></span><br><span class="line"><span class="literal">Yes</span></span><br><span class="line"><span class="literal">Yes</span></span><br><span class="line"><span class="literal">No</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>题目大意</strong>:给出几串序列，判断这些序列是不是迪杰斯特拉序列，所谓迪杰斯特拉序列就是由迪杰斯特拉算法每一步所得到的结点序号组成的序列，但有时迪杰斯特拉算法得出的序列并不唯一，因为有些结点可能和起点的距离一样。</p>
+<p><strong>题目大意</strong>:给出几串序列，判断这些序列是不是迪杰斯特拉序列，所谓迪杰斯特拉序列是由迪杰斯特拉算法每一步所得到的结点序号组成的序列，但有时迪杰斯特拉算法得出的序列并不唯一，因为有些结点可能和起点的距离一样。</p>
 <p><strong>思路</strong>：迪杰斯特拉算法每一次都是找到当前距离起点最近的结点，所以无论当前有几个结点和起点距离一样，它们的距离肯定会比下一个结点距离起点近或者一样，故可以利用迪杰斯特拉算法得出一串序列，然后和题目给的序列进行对比，要是后面有距离小于前面的结点则表示不是迪杰斯特拉序列。</p>
 <p><strong>代码</strong>：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf=<span class="number">1</span>&lt;&lt;<span class="number">31</span><span class="number">-1</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,query,adj[<span class="number">1024</span>][<span class="number">1024</span>],dis[<span class="number">1024</span>][<span class="number">1024</span>];</span><br><span class="line"><span class="keyword">bool</span> vis[<span class="number">1024</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dijkstra</span><span class="params">(<span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">	<span class="built_in">fill</span>(dis[index],dis[index]+<span class="number">1024</span>,inf);</span><br><span class="line">	<span class="built_in">fill</span>(vis,vis+<span class="number">1024</span>,<span class="literal">false</span>);</span><br><span class="line">	dis[index][index]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> u=<span class="number">-1</span>,Min=inf;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(vis[j]==<span class="literal">false</span>&amp;&amp;dis[index][j]&lt;Min)&#123;</span><br><span class="line">				u=j;</span><br><span class="line">				Min=dis[index][j];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(u==<span class="number">-1</span>) <span class="keyword">return</span> ;</span><br><span class="line">		vis[u]=<span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> v=<span class="number">1</span>;v&lt;=n;v++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(vis[v]==<span class="literal">false</span>&amp;&amp;adj[u][v]!=inf)&#123;</span><br><span class="line">				<span class="keyword">if</span>(dis[index][u]+adj[u][v]&lt;dis[index][v]) dis[index][v]=dis[index][u]+adj[u][v];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">	<span class="built_in">fill</span>(adj[<span class="number">0</span>],adj[<span class="number">0</span>]+<span class="number">1024</span>*<span class="number">1024</span>,inf);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> u,v,d;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;u,&amp;v,&amp;d);</span><br><span class="line">		adj[u][v]=adj[v][u]=d;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;query);</span><br><span class="line">	<span class="keyword">int</span> Hash[n+<span class="number">1</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">	<span class="keyword">while</span>(query--)&#123;</span><br><span class="line">		<span class="keyword">int</span> temp[n+<span class="number">1</span>],flag=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;temp[i]);</span><br><span class="line">		<span class="keyword">if</span>(Hash[temp[<span class="number">1</span>]]==<span class="number">0</span>) &#123; Dijkstra(temp[<span class="number">1</span>]); Hash[temp[<span class="number">1</span>]]=<span class="number">1</span>; &#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;<span class="number">2</span>;i--)&#123;</span><br><span class="line">			<span class="keyword">if</span>(dis[temp[<span class="number">1</span>]][temp[i]]&lt;dis[temp[<span class="number">1</span>]][temp[i<span class="number">-1</span>]]) &#123; flag=<span class="number">0</span>; <span class="keyword">break</span>; &#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(flag) <span class="built_in">printf</span>(<span class="string">"Yes\n"</span>);</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"No\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -250,17 +250,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/03/08/%E7%A7%8B%E5%AD%A37-3/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">秋季7-3</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/08/%E7%A7%8B%E5%AD%A37-2/">
-                <span class="level-item">秋季7-2</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/08/%E7%A7%8B%E5%AD%A37-3/">
+                <span class="level-item">秋季7-3</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -450,25 +443,6 @@
         
         <article class="media">
             
-            <a href="/2020/03/08/%E7%A7%8B%E5%AD%A37-3/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/ts6.jpg" alt="秋季7-3">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-08T12:39:20.000Z">2020-03-08</time></div>
-                    <a href="/2020/03/08/%E7%A7%8B%E5%AD%A37-3/" class="title has-link-black-ter is-size-6 has-text-weight-normal">秋季7-3</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/2019%E7%A7%8B%E5%AD%A3/">2019秋季</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/03/08/%E7%A7%8B%E5%AD%A37-4/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/ts7.jpg" alt="秋季7-4">
@@ -479,6 +453,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-08T12:39:20.000Z">2020-03-08</time></div>
                     <a href="/2020/03/08/%E7%A7%8B%E5%AD%A37-4/" class="title has-link-black-ter is-size-6 has-text-weight-normal">秋季7-4</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/2019%E7%A7%8B%E5%AD%A3/">2019秋季</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/08/%E7%A7%8B%E5%AD%A37-3/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/ts6.jpg" alt="秋季7-3">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-08T12:39:20.000Z">2020-03-08</time></div>
+                    <a href="/2020/03/08/%E7%A7%8B%E5%AD%A37-3/" class="title has-link-black-ter is-size-6 has-text-weight-normal">秋季7-3</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/2019%E7%A7%8B%E5%AD%A3/">2019秋季</a>
                     </p>
@@ -656,25 +649,6 @@
         
         <article class="media">
             
-            <a href="/2020/03/08/%E7%A7%8B%E5%AD%A37-3/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/ts6.jpg" alt="秋季7-3">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-08T12:39:20.000Z">2020-03-08</time></div>
-                    <a href="/2020/03/08/%E7%A7%8B%E5%AD%A37-3/" class="title has-link-black-ter is-size-6 has-text-weight-normal">秋季7-3</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/2019%E7%A7%8B%E5%AD%A3/">2019秋季</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/03/08/%E7%A7%8B%E5%AD%A37-4/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/ts7.jpg" alt="秋季7-4">
@@ -685,6 +659,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-08T12:39:20.000Z">2020-03-08</time></div>
                     <a href="/2020/03/08/%E7%A7%8B%E5%AD%A37-4/" class="title has-link-black-ter is-size-6 has-text-weight-normal">秋季7-4</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/2019%E7%A7%8B%E5%AD%A3/">2019秋季</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/08/%E7%A7%8B%E5%AD%A37-3/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/ts6.jpg" alt="秋季7-3">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-08T12:39:20.000Z">2020-03-08</time></div>
+                    <a href="/2020/03/08/%E7%A7%8B%E5%AD%A37-3/" class="title has-link-black-ter is-size-6 has-text-weight-normal">秋季7-3</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/2019%E7%A7%8B%E5%AD%A3/">2019秋季</a>
                     </p>
@@ -908,7 +901,7 @@
             <script>
                 var now = new Date(); 
                 function createtime() { 
-                    var grt= new Date("7/9/2019 12:00:00");//此处修改你的建站时间或者网站上线时间 
+                    var grt= new Date("7/7/2019 12:00:00"); 
                     now.setTime(now.getTime()+250); 
                     days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
                     hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
